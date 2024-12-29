@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/hacked" rel="stylesheet">
     <title>Hacked By SPY*WarriorBD</title>
     <style>
         body {
@@ -10,6 +11,7 @@
             height: 100vh;
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
            /* background-color: #000; */
             font-family: monospace;
@@ -27,6 +29,31 @@
             animation: openTerminal 1s ease-out forwards;
             opacity: 0;
         }
+        .h1 {
+            font-family: 'HACKED', sans-serif;
+            color: #0f0;
+            text-align: center; /* Center the text horizontally */
+            margin-bottom: 20px; /* Space between the heading and terminal */
+            animation: glitch 1.5s infinite;
+        }
+        @keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #ff0000, -2px -2px #0000ff;
+    }
+    25% {
+        text-shadow: -2px 2px #00ff00, 2px -2px #ff00ff;
+    }
+    50% {
+        text-shadow: 2px -2px #ffff00, -2px 2px #00ffff;
+    }
+    75% {
+        text-shadow: -2px -2px #ff0000, 2px 2px #0000ff;
+    }
+    100% {
+        text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff;
+    }
+}
+
 
         @keyframes openTerminal {
             0% {
@@ -100,6 +127,9 @@
             width: 20px;
             height: 20px;
             border-radius: 100%;
+        }
+        .h1{
+            font-family: 'HACKED', sans-serif;
         }
         .overlay {
             position: fixed;
@@ -184,11 +214,12 @@
                 font-size: 15px;
             }
         }
-
+        
     </style>
 </head>
 <body oncontextmenu="return false;">
     <div class="overlay"></div>  
+    <h1 class="h1"> ----------------------------------------------------------- </h1>
     <div class="terminal-container">
         <div class="terminal-header">
             <image class="img" src="https://icon-library.com/images/terminal-icon/terminal-icon-4.jpg">
@@ -228,7 +259,7 @@
     ╚══════╝╚═╝        ╚═╝         ╚═════╝ ╚══════╝╚═╝  ╚═╝ 
     </p> </div>
         </div>
-        <h1 class="h1" style="padding: 20px;" align="center">HACKED BY ŜPÝ*WørrïørBD ㉿ŜPÝ*DER</h1>
+        <h1 padding="20px" align="center">HACKED BY ŜPÝ*WørrïørBD ㉿ŜPÝ*DER</h1>
     </div>
 
     <script>
