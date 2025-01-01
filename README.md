@@ -46,7 +46,7 @@ This page is intended for **educational purposes only** and aims to:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/deface-page.git
+   git clone https://github.com/Istiaq-Alam/SPYDER-Deface-Page.git
    ```
 
 2. Open `index.html` in any modern web browser to view the deface page.
