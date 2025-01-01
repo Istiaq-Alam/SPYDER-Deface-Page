@@ -63,7 +63,11 @@ This page is intended for **educational purposes only** and aims to:
 - **Awareness Tool:** This page should be deployed in controlled environments or for training sessions.
 
 ## Screenshots
-Include a screenshot of the webpage (optional).
+![2025-01-01](https://github.com/user-attachments/assets/9d571ebb-de72-436d-b671-67f041fc7a33)
+![2025-01-01 (1)](https://github.com/user-attachments/assets/508f407c-6d8d-43c5-8339-8fba086fb1dc)
+![2025-01-01 (2)](https://github.com/user-attachments/assets/f8f33d7a-cfc4-4a2d-8a62-5f2e7d4b3d30)
+![2025-01-01 (3)](https://github.com/user-attachments/assets/edc7608c-8d62-4686-a7d9-068af21ac510)
+
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
