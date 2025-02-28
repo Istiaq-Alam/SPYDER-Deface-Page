@@ -178,6 +178,7 @@
             .h1{
                 font-size: 20px;
             }
+            
         }
         @media (max-width: 480px) {
             .terminal-container {
@@ -217,16 +218,6 @@
             }
         }
 
-
-
-        .container {
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-
 .text {
   font-weight: 100;
   font-size: 28px;
@@ -238,6 +229,25 @@
 .dud {
   color: #f70303;
 }
+@media (max-width: 768px) {
+    .text {
+    font-weight: 100;
+    font-size: 20px;
+    color: #00ff15;
+    font-family: Iceland;
+    text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+  }
+}
+
+@media (max-width: 480px) {
+    .text {
+    font-weight: 100;
+    font-size: 15px;
+    color: #00ff15;
+    font-family: Iceland;
+    text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+  }
+}
 
 .animation-container {
   position: fixed;
@@ -245,7 +255,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .animation-container span {
@@ -258,12 +268,13 @@
   user-select: none;
   pointer-events: none;
   cursor: default;
-  z-index: 1;
+  z-index: 10;
   opacity: 0;
   will-change: transform, opacity;
   animation-timing-function: ease-out;
   animation-name: move;
 }
+
 
 @keyframes move {
   0% {
@@ -485,39 +496,50 @@ next()
 'use strict';
 
 var app = {
-
   chars: ['ŜPÝ*WørrïørBD','ŜPÝ*DER','127.0.0.1','ŜPÝ*Wolf','0x523344','Localhost','ŜPÝ*ReVeN','HACKED!','Security','Breached!','System'],
-
+  
   init: function () {
-    app.container = document.createElement('div');
-    app.container.className = 'animation-container';
-    document.body.appendChild(app.container);
+    app.leftContainer = document.createElement('div');
+    app.leftContainer.className = 'animation-container left';
+    document.body.appendChild(app.leftContainer);
+
+    app.rightContainer = document.createElement('div');
+    app.rightContainer.className = 'animation-container right';
+    document.body.appendChild(app.rightContainer);
+
     window.setInterval(app.add, 100);
   },
 
   add: function () {
-    var element = document.createElement('span');
-    app.container.appendChild(element);
-    app.animate(element);
+    var elementLeft = document.createElement('span');
+    var elementRight = document.createElement('span');
+
+    app.leftContainer.appendChild(elementLeft);
+    app.rightContainer.appendChild(elementRight);
+
+    app.animate(elementLeft, "left");
+    app.animate(elementRight, "right");
   },
 
-  animate: function (element) {
+  animate: function (element, side) {
     var character = app.chars[Math.floor(Math.random() * app.chars.length)];
     var duration = Math.floor(Math.random() * 15) + 1;
     var offset = Math.floor(Math.random() * (50 - duration * 2)) + 3;
     var size = 10 + (15 - duration);
-    element.style.cssText = 'right:'+offset+'vw; font-size:'+size+'px;animation-duration:'+duration+'s';
+
+    element.style.cssText = `${side === "left" ? "left" : "right"}:${offset}vw; font-size:${size}px; animation-duration:${duration}s`;
     element.innerHTML = character;
+
     window.setTimeout(app.remove, duration * 1000, element);
   },
 
   remove: function (element) {
     element.parentNode.removeChild(element);
   },
-
 };
 
 document.addEventListener('DOMContentLoaded', app.init);
+
     </script>
     
 </body>
