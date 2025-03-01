@@ -27,7 +27,7 @@
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             border-radius: 10px;
             overflow: hidden;
-            animation: openTerminal 1s ease-out forwards;
+            animation: openTerminal 2s ease-out forwards;
             opacity: 0;
         }
         .h1 {
@@ -95,8 +95,8 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+          0% { opacity: 0;  /*transform: scale(0.9); */ }
+          100% { opacity: 1; /*transform: scale(1); */ }
         }
 
         @keyframes typing {
@@ -295,10 +295,77 @@
     transform: none;
   }
 }
+
+/* Fullscreen Loading Screen */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 1000%;
+    background: rgba(0, 0, 0, 0.671);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Green Box Around Loading */
+.loading-box {
+    border: 4px solid rgb(114, 209, 102);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Loading Text */
+.loading-text {
+    font-family: 'Hack', monospace;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(202, 31, 31);
+    margin-bottom: 30px;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    width: 250px;
+    height: 20px;
+    border: 2px solid rgb(0, 255, 0);
+    background: rgba(0, 0, 0, 0.87);
+    overflow: hidden;
+}
+
+/* Animated Progress */
+.progress {
+    width: 0%;
+    height: 100%;
+    background: limegreen;
+    animation: loading 0.5s linear forwards;
+}
+
+/* Loading Animation */
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
     </style>
 </head>
+
 <body oncontextmenu="return false;">
-    
+
+  <!--New Loading Screen-->
+  <div id="loading-screen">
+    <div class="loading-box">
+        <p class="loading-text">Opening Console...</p>
+        <div class="progress-bar"> 
+            <div class="progress"></div>
+        </div>
+    </div>
+</div>
+
+
+
     <div class="overlay"></div>  
     <!-- <h1 class="h1"> You are Hacked 🔥</h1> -->
     <h1 class="h1">HACKED BY SPY*WorriorBD ㉿SPY*DER</h1>
@@ -346,13 +413,21 @@
     </div>
     
     <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+    }, 800); // Adjust time to match the animation duration
+});
+
         const backgrounds = [
             'https://gifdb.com/images/high/matrix-code-scary-face-loop-5tvidy2hcuzudzvb.webp',
             'https://gifdb.com/images/high/matrix-code-hacking-binary-scalar-hqj7vegelavwt395.webp',
-            'https://gifdb.com/images/high/matrix-code-animated-falling-letters-yezd0vz1g63etctb.webp',
+            'https://i.gifer.com/133C.gif',
             'https://gifdb.com/images/high/raining-soft-matrix-code-hb6iao1lji7py2ks.webp',
             'https://i.giphy.com/12W5Sg2koWYnwA.webp',
-            'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnM3ODlxdGR5aGkweGdocmg2ZG92dXppOTNlcnJ0NzB3dXpmM3dnayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/V4NSR1NG2p0KeJJyr5/giphy.webp'
+            'https://i.gifer.com/758a.gif',
+            'https://i.gifer.com/Nv2.gif',
+
         ];
         //Enhance image Loader//
        backgrounds.forEach((url) => {
@@ -361,8 +436,6 @@
         }); 
 
         const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-       // const fallbackBackground = 'https://i.giphy.com/12W5Sg2koWYnwA.webp';
-       // document.body.style.backgroundImage = `url('${randomBackground || fallbackBackground}')`;
         document.body.style.backgroundImage = `url('${randomBackground}')`;
     </script> 
 
