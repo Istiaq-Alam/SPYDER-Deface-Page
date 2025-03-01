@@ -27,7 +27,7 @@
             box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             border-radius: 10px;
             overflow: hidden;
-            animation: openTerminal 1s ease-out forwards;
+            animation: openTerminal 2s ease-out forwards;
             opacity: 0;
         }
         .h1 {
@@ -95,8 +95,8 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+          0% { opacity: 0;  /*transform: scale(0.9); */ }
+          100% { opacity: 1; /*transform: scale(1); */ }
         }
 
         @keyframes typing {
@@ -295,10 +295,68 @@
     transform: none;
   }
 }
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.795);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 0, 0);
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    z-index: 99;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    width: 300px;
+    height: 20px;
+    border: 2px solid green;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Progress */
+.progress {
+    width: 0%;
+    height: 100%;
+    background: limegreen;
+    animation: loading 0.5s linear forwards;
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Initially Hide Terminal */
+terminal-container {
+    display: none;
+}
+
     </style>
 </head>
 <body oncontextmenu="return false;">
-    
+
+  <!--New Loading Screen-->
+  <div id="loading-screen">
+    <p>Opening Console...</p>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+</div>
+
+<div id="terminal-container">
+    <!-- Your Terminal Content Goes Here -->
+</div>
+
+
     <div class="overlay"></div>  
     <!-- <h1 class="h1"> You are Hacked 🔥</h1> -->
     <h1 class="h1">HACKED BY SPY*WorriorBD ㉿SPY*DER</h1>
@@ -346,6 +404,13 @@
     </div>
     
     <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("terminal-container").style.display = "block";
+    }, 800); // Adjust time to match the animation duration
+});
+
         const backgrounds = [
             'https://gifdb.com/images/high/matrix-code-scary-face-loop-5tvidy2hcuzudzvb.webp',
             'https://gifdb.com/images/high/matrix-code-hacking-binary-scalar-hqj7vegelavwt395.webp',
@@ -354,7 +419,7 @@
             'https://i.giphy.com/12W5Sg2koWYnwA.webp',
             'https://i.gifer.com/758a.gif',
             'https://i.gifer.com/Nv2.gif',
-            
+
         ];
         //Enhance image Loader//
        backgrounds.forEach((url) => {
