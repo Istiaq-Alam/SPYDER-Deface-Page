@@ -21,7 +21,7 @@ This project contains an HTML file for a "deface page," often used in ethical ha
   - Displays randomly selected images as the background, enhancing the aesthetics of the page.
 
 ## WebPage Criteria :
-- Loading Window
+- Blinking Loading Window
 - Hacking Terminal Toast
 - Terminal Closing Loop
 - Phrases Typing Animation  
