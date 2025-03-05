@@ -1,6 +1,10 @@
 # Deface Web Page - Ethical Hacking Demonstration
 you can see the output here 🔗[Deface_Page](https://istiaq-alam.github.io/SPYDER-Deface-Page/)
 
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=19464100&style=0010&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>
+
 ## Overview
 This project contains an HTML file for a "deface page," often used in ethical hacking demonstrations or cybersecurity training to simulate website security breaches. The page mimics the appearance of a defaced website and serves as a tool for awareness and education about web application security.
 
