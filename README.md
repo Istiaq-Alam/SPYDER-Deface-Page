@@ -1,5 +1,5 @@
 # Deface Web Page - Ethical Hacking Demonstration
-you can see the output here 🔗[Link](https://istiaq-alam.github.io/SPYDER-Deface-Page/)
+you can see the output here 🔗[Deface_Page](https://istiaq-alam.github.io/SPYDER-Deface-Page/)
 
 ## Overview
 This project contains an HTML file for a "deface page," often used in ethical hacking demonstrations or cybersecurity training to simulate website security breaches. The page mimics the appearance of a defaced website and serves as a tool for awareness and education about web application security.
@@ -20,8 +20,21 @@ This project contains an HTML file for a "deface page," often used in ethical ha
 - **Random Background Images:**
   - Displays randomly selected images as the background, enhancing the aesthetics of the page.
 
-- **Sound Effects:**
-  - Automatically plays sound effects 1 second after the page loads to create an immersive experience.
+## WebPage Criteria :
+- Loading Window
+- Hacking Terminal Toast
+- Terminal Closing Loop
+- Phrases Typing Animation  
+- Instant Inspect Prevention
+- Select Element Prevention
+- Copy Element Prevention
+- Marquee Usernames
+- Random Background
+- Glitched Defacing Text
+- Scramble Text in Terminal Footer 
+- Automatic Phrase Changing 
+- No Image [Text Only] Page
+- Advanced Scripting in 3 Layers
 
 ## Purpose
 This page is intended for **educational purposes only** and aims to:
@@ -40,7 +53,7 @@ This page is intended for **educational purposes only** and aims to:
   - Dynamic content updates in the terminal.
   - Random background selection.
   - Sound playback automation.
-- **Audio Effects:** Integrated sound files to enhance user experience.
+- **Audio Effects:** Integrated sound files to enhance user experience. (Under Development)
 
 ## How to Use
 
