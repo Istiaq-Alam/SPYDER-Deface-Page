@@ -1,7 +1,7 @@
 # Deface Web Page - Ethical Hacking Demonstration
 you can see the output here 🔗[Deface_Page](https://istiaq-alam.github.io/SPYDER-Deface-Page/)
 
-![Page View](https://hits.sh/https://istiaq-alam.github.io/SPYDER-Deface-Page/.svg?style=flat-square)
+## Page View ![Page View](https://hits.sh/https://istiaq-alam.github.io/SPYDER-Deface-Page.svg?style=flat-square)
 
 
 ## Overview
