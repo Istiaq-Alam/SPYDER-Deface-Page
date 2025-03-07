@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPYDER | HomePage</title>
+    <title>SPYWARE | HomePage</title>
     <link href="https://fonts.cdnfonts.com/css/hacked" rel="stylesheet">
     <style>
         body {
@@ -24,60 +24,106 @@
             50% { text-shadow: -2px 2px #00ff00, 2px -2px #ff00ff; }
             100% { text-shadow: 2px -2px #ffff00, -2px 2px #00ffff; }
         }
-        .matrix {
+        .background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://i.giphy.com/media/12W5Sg2koWYnwA/giphy.gif');
             background-size: cover;
             opacity: 0.3;
             z-index: -1;
         }
-        .search-container {
-            margin-top: 20px;
+        .terminal {
+            width: 80%;
+            max-width: 900px;
+            background-color: #000;
+            border: 2px solid limegreen;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 20px limegreen;
+            text-align: left;
         }
-        input[type="text"] {
-            padding: 10px;
-            width: 60%;
+        .search-container, .links-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        input, button {
             background: black;
             color: limegreen;
             border: 2px solid limegreen;
-            font-size: 18px;
-            text-align: center;
-        }
-        button {
             padding: 10px;
-            background: limegreen;
-            color: black;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
             background: red;
-            color: white;
+        }
+        .quick-links img {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="matrix"></div>
-    <h1>HACKED BY SPYDER</h1>
-    <p>Your System Is Under Our Control</p>
-    <p>We Are <span>Legion</span>. We Do Not <span>Forgive</span>. We Do Not <span>Forget</span>.</p>
-    <p>Expect Us...</p>
-    
-    <div class="search-container">
-        <input type="text" id="search" placeholder="Search the Web">
-        <button onclick="searchWeb()">Search</button>
+    <div class="background" id="background"></div>
+    <h1>SPYWARE Web Home Page</h1>
+    <div class="terminal">
+        <p align="center">Welcome to SPYDER Cyber Terminal...</p>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search Google or DuckDuckGo">
+            <button onclick="searchWeb('google')">Google</button>
+            <button onclick="searchWeb('duckduckgo')">DuckDuckGo</button>
+        </div>
+        <div class="search-container">
+            <input type="text" id="tor-search" placeholder="Enter Dark Web URL (.onion)">
+            <button onclick="openTor()">Connect to Tor</button>
+        </div>
+        <p align="center">Bookmarks</p>
+        <div class="links-container">
+            <a href="https://www.youtube.com" target="_blank"><img src="https://img.icons8.com/color/48/youtube.png" alt="YouTube"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook"></a>
+            <a href="https://mail.google.com" target="_blank"><img src="https://img.icons8.com/color/48/gmail.png" alt="Gmail"></a>
+            <a href="https://www.kali.org/docs/" target="_blank"><img src="https://img.icons8.com/color/48/linux.png" alt="Kali Docs"></a>
+        </div>
+        
     </div>
-    
     <script>
-        function searchWeb() {
+        function searchWeb(engine) {
             let query = document.getElementById("search").value;
-            window.location.href = `https://www.google.com/search?q=${query}`;
+            let url = engine === 'google' ? `https://www.google.com/search?q=${query}` : `https://duckduckgo.com/?q=${query}`;
+            window.open(url, "_blank");
         }
+        function openTor() {
+            let url = document.getElementById("tor-search").value;
+            if (url.includes(".onion")) {
+                window.open(`http://${url}`, "_blank");
+            } else {
+                alert("Invalid .onion URL!");
+            }
+        }
+        
+        const backgrounds = [
+            'https://gifdb.com/images/high/matrix-code-scary-face-loop-5tvidy2hcuzudzvb.webp',
+            'https://gifdb.com/images/high/matrix-code-hacking-binary-scalar-hqj7vegelavwt395.webp',
+            'https://i.gifer.com/133C.gif',
+            'https://gifdb.com/images/high/raining-soft-matrix-code-hb6iao1lji7py2ks.webp',
+            'https://i.giphy.com/12W5Sg2koWYnwA.webp',
+            'https://i.gifer.com/758a.gif',
+            'https://i.gifer.com/Nv2.gif',
+
+        ];
+        //Enhance image Loader//
+       backgrounds.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        }); 
+
+        const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+        document.body.style.backgroundImage = `url('${randomBackground}')`;
     </script>
 </body>
 </html>
