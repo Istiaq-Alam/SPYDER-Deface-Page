@@ -56,7 +56,7 @@ This page is intended for **educational purposes only** and aims to:
   - Dynamic content updates in the terminal.
   - Random background selection.
   - Sound playback automation.
-- **Audio Effects:** Integrated sound files to enhance user experience. (Under Development)
+- **Audio Effects:** Integrated sound files to enhance user experience.  (Under Development | Not Implemented)
 
 ## How to Use
 
