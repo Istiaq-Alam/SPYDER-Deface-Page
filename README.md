@@ -3,8 +3,6 @@ you can see the output here 🔗[Deface_Page](https://istiaq-alam.github.io/SPYD
 
 Page View Count   ![Page View](https://hits.sh/https://istiaq-alam.github.io/SPYDER-Deface-Page.svg?style=flat-square)
 
-   
-
 ## Overview
 This project contains an HTML file for a "deface page," often used in ethical hacking demonstrations or cybersecurity training to simulate website security breaches. The page mimics the appearance of a defaced website and serves as a tool for awareness and education about web application security.
 
