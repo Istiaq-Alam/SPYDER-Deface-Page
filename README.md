@@ -3,7 +3,6 @@ you can see the output here 🔗[Deface_Page](https://istiaq-alam.github.io/SPYD
 
 Page View Count   ![Page View](https://hits.sh/https://istiaq-alam.github.io/SPYDER-Deface-Page.svg?style=flat-square)
 
-
 ## Overview
 This project contains an HTML file for a "deface page," often used in ethical hacking demonstrations or cybersecurity training to simulate website security breaches. The page mimics the appearance of a defaced website and serves as a tool for awareness and education about web application security.
 
@@ -56,7 +55,7 @@ This page is intended for **educational purposes only** and aims to:
   - Dynamic content updates in the terminal.
   - Random background selection.
   - Sound playback automation.
-- **Audio Effects:** Integrated sound files to enhance user experience. (Under Development)
+- **Audio Effects:** Integrated sound files to enhance user experience.  (Under Development | Not Implemented)
 
 ## How to Use
 
@@ -70,7 +69,9 @@ This page is intended for **educational purposes only** and aims to:
 3. Optionally, modify the following to customize the page:
    - Terminal messages: Update the `content` array in the `<script>` tag.
    - Background images: Add or change URLs in the `backgrounds` array in the `<script>` tag.
-   - Sound effects: Replace the `sound-effect.mp3` file with your preferred sound.
+   - ASCII Art: Change the ASCII Art as your prefer into the `<p>` tag on the termal.
+   - Scramble Text: Add or change Random phrases in the `<script>` tag (bottom of the terminal) 
+   - Sound effects: Replace the `sound-effect.mp3` file with your preferred sound. [Still under development, might not work on all browser] 
 
 ## Security Considerations
 
@@ -79,10 +80,10 @@ This page is intended for **educational purposes only** and aims to:
 - **Awareness Tool:** This page should be deployed in controlled environments or for training sessions.
 
 ## Screenshots
-![2025-01-01](https://github.com/user-attachments/assets/9d571ebb-de72-436d-b671-67f041fc7a33)
-![2025-01-01 (1)](https://github.com/user-attachments/assets/508f407c-6d8d-43c5-8339-8fba086fb1dc)
-![2025-01-01 (2)](https://github.com/user-attachments/assets/f8f33d7a-cfc4-4a2d-8a62-5f2e7d4b3d30)
-![2025-01-01 (3)](https://github.com/user-attachments/assets/edc7608c-8d62-4686-a7d9-068af21ac510)
+1
+2
+3
+4
 
 
 ## License
