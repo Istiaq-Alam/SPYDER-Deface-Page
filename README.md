@@ -79,11 +79,14 @@ This page is intended for **educational purposes only** and aims to:
 - **No Harmful Code:** The page contains no malicious scripts and does not collect or transmit any data.
 - **Awareness Tool:** This page should be deployed in controlled environments or for training sessions.
 
-## Screenshots
-1
-2
-3
-4
+## Screenshots with Random Background 
+![Image](https://github.com/user-attachments/assets/2a41dd40-fb16-4ed8-b340-8a9ae9f822cc)
+
+![Image](https://github.com/user-attachments/assets/7a8922ae-7177-497e-8151-90d4169f26d0)
+
+![Image](https://github.com/user-attachments/assets/4019b96d-99bc-443f-8d9b-4e4434e80d96)
+
+![Image](https://github.com/user-attachments/assets/0af89504-f8f5-4177-9b0b-506f16240504)
 
 
 ## License
