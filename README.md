@@ -95,7 +95,7 @@ This page is intended for **educational purposes only** and aims to:
 
 ![Image](https://github.com/user-attachments/assets/0af89504-f8f5-4177-9b0b-506f16240504)
 
-## Screenshot TOR Browser [If No-Script Enable]
+## Screenshot in TOR Browser [If No-Script Enable]
 ![Image](https://github.com/user-attachments/assets/7da34e2c-8ec1-400b-b03d-58d2df5be2bc)
 
 ## License
