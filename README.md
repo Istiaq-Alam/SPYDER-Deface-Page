@@ -37,6 +37,8 @@ This project contains an HTML file for a "deface page," often used in ethical ha
 - Automatic Phrase Changing 
 - No Image [Text Only] Page
 - Advanced Scripting in 3 Layers
+- No-Script Detection with Different Access
+
 
 ## Purpose
 This page is intended for **educational purposes only** and aims to:
@@ -44,6 +46,7 @@ This page is intended for **educational purposes only** and aims to:
 1. Highlight the importance of securing web applications.
 2. Demonstrate the consequences of inadequate web security.
 3. Educate developers and administrators about common vulnerabilities.
+
 
 ## Technologies Used
 
@@ -55,6 +58,7 @@ This page is intended for **educational purposes only** and aims to:
   - Dynamic content updates in the terminal.
   - Random background selection.
   - Sound playback automation.
+  - No-Script Detection
 - **Audio Effects:** Integrated sound files to enhance user experience.  (Under Development | Not Implemented)
 
 ## How to Use
@@ -78,6 +82,9 @@ This page is intended for **educational purposes only** and aims to:
 - **For Ethical Use Only:** This page is meant for ethical hacking demonstrations and educational purposes. It should never be used for malicious intent.
 - **No Harmful Code:** The page contains no malicious scripts and does not collect or transmit any data.
 - **Awareness Tool:** This page should be deployed in controlled environments or for training sessions.
+- **No-Script Detection:**
+  - Preventing Content Access: Can restrict users from accessing the page if JavaScript is required.
+  - Hacking & Cybersecurity Use: Useful for penetration testers to detect script-blocking environments.
 
 ## Screenshots with Random Background 
 ![Image](https://github.com/user-attachments/assets/2a41dd40-fb16-4ed8-b340-8a9ae9f822cc)
@@ -88,6 +95,8 @@ This page is intended for **educational purposes only** and aims to:
 
 ![Image](https://github.com/user-attachments/assets/0af89504-f8f5-4177-9b0b-506f16240504)
 
+## Screenshot in TOR Browser [If No-Script Enable]
+![Image](https://github.com/user-attachments/assets/7da34e2c-8ec1-400b-b03d-58d2df5be2bc)
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
