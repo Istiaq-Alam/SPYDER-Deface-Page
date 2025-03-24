@@ -356,14 +356,27 @@
 
 <body oncontextmenu="return false;">
   <!--New Loading Screen-->
-  <div id="loading-screen">
-    <div class="loading-box">
-        <p class="loading-text">⚠ Opening Console 🕷</p>
-        <div class="progress-bar"> 
-            <div class="progress"></div>
-        </div>
-    </div>
+<div id="loading-screen">
+  <div class="loading-box">
+      <p class="loading-text">⚠ Access Denied 🕷</p>
+      <div class="progress-bar"> 
+          <div class="progress"></div>
+      </div>
+  </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("loading-screen").innerHTML = `
+          <div class="loading-box">
+              <p class="loading-text">⚠ Opening Console 🕷</p>
+              <div class="progress-bar"> 
+                  <div class="progress"></div>
+              </div>
+          </div>
+      `;
+  });
+</script>
     <div class="overlay"></div>  
     <!-- <h1 class="h1"> You are Hacked 🔥</h1> -->
     <h1 class="h1">HACKED BY SPY*WorriorBD ㉿SPY*DER🕷</h1>
