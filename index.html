@@ -321,6 +321,16 @@
     justify-content: center;
     animation: blink 0.20s infinite alternate;
 }
+/* Red Box Around Loading */
+.loading-box2 {
+    border: 4px solid rgb(255, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: blink 0.20s infinite alternate;
+}
 
 /* Loading Text */
 .loading-text {
@@ -339,11 +349,24 @@
     background: rgba(0, 0, 0, 0.87);
     overflow: hidden;
 }
+.progress-bar2 {
+    width: 250px;
+    height: 20px;
+    border: 2px solid rgb(0, 255, 0);
+    background: rgba(60, 255, 0, 0.87);
+    overflow: hidden;
+}
 /* Animated Progress */
 .progress {
     width: 0%;
     height: 100%;
     background: limegreen;
+    animation: loading 0.5s linear forwards;
+}
+.progress2 {
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 0, 0);
     animation: loading 0.5s linear forwards;
 }
 /* Loading Animation */
@@ -357,10 +380,10 @@
 <body oncontextmenu="return false;">
   <!--New Loading Screen-->
 <div id="loading-screen">
-  <div class="loading-box">
-      <p class="loading-text">⚠ Access Denied 🕷</p>
-      <div class="progress-bar"> 
-          <div class="progress"></div>
+  <div class="loading-box2">
+      <p class="loading-text">⚠ Access Denied 🚫</p>
+      <div class="progress-bar2"> 
+          <div class="progress2"></div>
       </div>
   </div>
 </div>
