@@ -96,7 +96,7 @@ This page is intended for **educational purposes only** and aims to:
 ![Image](https://github.com/user-attachments/assets/0af89504-f8f5-4177-9b0b-506f16240504)
 
 ## Screenshot in TOR Browser [If No-Script Enable]
-![Image](https://github.com/user-attachments/assets/7da34e2c-8ec1-400b-b03d-58d2df5be2bc)
+![Image](https://github.com/user-attachments/assets/dd2a78cc-b7d2-48ea-a1d8-4ee4428a1e52)
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
