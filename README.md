@@ -97,7 +97,7 @@ This page is intended for **educational purposes only** and aims to:
 
 
 ## Screenshot in TOR Browser [If No-Script Enable]
-![Image](https://github.com/user-attachments/assets/dd2a78cc-b7d2-48ea-a1d8-4ee4428a1e52)
+![Image](https://github.com/user-attachments/assets/662ff8d7-c9e5-4924-83d9-ff1758d1c66f)
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for more information.
