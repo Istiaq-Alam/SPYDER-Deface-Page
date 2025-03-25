@@ -86,14 +86,15 @@ This page is intended for **educational purposes only** and aims to:
   - Preventing Content Access: Can restrict users from accessing the page if JavaScript is required.
   - Hacking & Cybersecurity Use: Useful for penetration testers to detect script-blocking environments.
 
+## Loading Overlay
+![Image](https://github.com/user-attachments/assets/d615f935-aaf1-4a33-8e4e-fe69154fb2b1)
+
 ## Screenshots with Random Background 
-![Image](https://github.com/user-attachments/assets/2a41dd40-fb16-4ed8-b340-8a9ae9f822cc)
+![Image](https://github.com/user-attachments/assets/92535c15-aa0f-4ecb-9681-ff0721a3e067)
+![Image](https://github.com/user-attachments/assets/0fc4038f-1706-4035-9016-46cc7ff7f78a)
+![Image](https://github.com/user-attachments/assets/bf657d1e-2f13-4ef5-a423-56b1f2aa505e)
+![Image](https://github.com/user-attachments/assets/caaea55a-e007-4b7b-a3cd-f61a9f08ac97)
 
-![Image](https://github.com/user-attachments/assets/7a8922ae-7177-497e-8151-90d4169f26d0)
-
-![Image](https://github.com/user-attachments/assets/4019b96d-99bc-443f-8d9b-4e4434e80d96)
-
-![Image](https://github.com/user-attachments/assets/0af89504-f8f5-4177-9b0b-506f16240504)
 
 ## Screenshot in TOR Browser [If No-Script Enable]
 ![Image](https://github.com/user-attachments/assets/dd2a78cc-b7d2-48ea-a1d8-4ee4428a1e52)
