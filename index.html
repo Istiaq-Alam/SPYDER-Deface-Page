@@ -423,6 +423,11 @@ footer {
           </div>
       `;
   });
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+    }, 800); // Adjust time to match the animation duration
+});  
 </script>
     <div class="overlay"></div>  
     <!-- <h1 class="h1"> You are Hacked 🔥</h1> -->
@@ -474,12 +479,6 @@ footer {
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(() => {
-        document.getElementById("loading-screen").style.display = "none";
-    }, 800); // Adjust time to match the animation duration
-});  
-
         const backgrounds = [
             'https://gifdb.com/images/high/matrix-code-scary-face-loop-5tvidy2hcuzudzvb.webp',
             'https://gifdb.com/images/high/matrix-code-hacking-binary-scalar-hqj7vegelavwt395.webp',

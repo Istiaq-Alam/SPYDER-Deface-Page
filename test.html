@@ -24,6 +24,11 @@
     }
     canvas {
       display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      pointer-events: none;
     }
 
     .terminal-container {
@@ -400,17 +405,267 @@ footer {
     padding: 30px 0;
     font-family: Hack;
     text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
-}
-
-
-    
+}    
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
   <canvas id="matrix"></canvas>
+   <!--New Loading Screen-->
+<div id="loading-screen">
+    <div class="loading-box2">
+        <p class="loading-text">⚠ Access Denied 🚫</p>
+        <div class="progress-bar2"> 
+            <div class="progress2"></div>
+        </div>
+    </div>
+  </div>
   
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("loading-screen").innerHTML = `
+            <div class="loading-box">
+                <p class="loading-text">⚠ Opening Console 🕷</p>
+                <div class="progress-bar"> 
+                    <div class="progress"></div>
+                </div>
+            </div>
+        `;
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+    }, 800); // Adjust time to match the animation duration
+});  
+  </script> 
+<div class="overlay"></div>  
+<!-- <h1 class="h1"> You are Hacked 🔥</h1> -->
+<h1 class="h1">HACKED BY SPY*WorriorBD ㉿SPY*DER🕷</h1>
+<div class="terminal-container">
+    <div class="terminal-header">
+        <image class="img" src="https://icon-library.com/images/terminal-icon/terminal-icon-4.jpg">
+        <span>Tost from SPY*WorriorBD - terminal</span>
+        <a href="index.html"><button class="but">&times;</button></a>
+        <a href="index.html"><button class="but">&square;</button></a>
+        <a href="index.html"><button class="but">&boxh;</button></a>
+    </div>
+    <div class="terminal-body" id="terminalBody">
+        
+        <div class="align"> <p class="p2">          
+        <img class="logo" src="https://i.ibb.co.com/S70PBNkr/logo.jpg">
+███████╗██████╗ ██╗   ██╗      ██████╗ ███████╗██████╗ 
+██╔════╝██╔══██╗╚██╗ ██╔╝▄ ██╗▄██╔══██╗██╔════╝██╔══██╗
+███████╗██████╔╝ ╚████╔╝  ████╗██║  ██║█████╗  ██████╔╝
+╚════██║██╔═══╝   ╚██╔╝  ▀╚██╔▀██║  ██║██╔══╝  ██╔══██╗
+███████║██║        ██║     ╚═╝ ██████╔╝███████╗██║  ██║
+  ╚══════╝╚═╝        ╚═╝         ╚═════╝ ╚══════╝╚═╝  ╚═╝  
+                                    from SPY*WorriorBD
+</p> </div>
+    </div><br>
+    <div padding="20px" align="center" class="text"></div> <br> 
+   <!-- <h1 padding="20px" align="center">HACKED BY ŜPÝ*WørrïørBD ㉿ŜPÝ*DER</h1> --> 
+</div>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // Disable Right-Click
+  document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+  });
+
+  // Disable Text Selection
+  document.addEventListener("selectstart", function(event) {
+      event.preventDefault();
+  });
+
+  // Disable Copying (Ctrl+C, Ctrl+X, Ctrl+V, etc.)
+  document.addEventListener("keydown", function(event) {
+      if (event.ctrlKey && (event.key === "c" || event.key === "x" || event.key === "v" || event.key === "u")) {
+          event.preventDefault();
+      }
+  });
+});
+  </script>
 
 
+<script>
+    const terminalBody = document.getElementById('terminalBody');
+    const content = [
+        { text: 'We Are ŜPÝ*WørrïørBD🕷', color: 'lime' },
+        { text: 'Hello Admin/Guest!,', color: 'white' },
+        { text: '[HTTP_ACCEPT_ENCODING] => gzip, deflate', color: 'green' },
+        { text: '[HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.8', color: 'green' },
+        { text: '[SERVER_PROTOCOL] => HTTP/1.1', color: 'green' },
+        { text: '', color: 'white' },
+        { text: 'Array', color: 'magenta' },
+        { text: '{', color: 'magenta' },
+        { text: '    Your System has been hacked by ŜPÝ*WørrïørBD. ', color: 'red' },
+        { text: '    That\'s just WARNING For You! ', color: 'cyan' },
+        { text: '    You know that your SECURITY is still LACKING and there are many HOLES in your SYSTEM.', color: 'cyan' },
+        { text: '    Don\'t worry ADMIN, Your DATABASE is SAFE! Nothing deleted just changed the INDEX page.', color: 'cyan' },
+        { text: '    PATCH your SYSTEM otherwise we will be back soon! ', color: 'cyan' },
+        { text: '    We have no connection with terrorism.', color: 'red' },
+        { text: '    Nothing! SECURITY Is Perfect.', color: 'lime' },
+        { text: '}', color: 'magenta' },
+        { text: '', color: 'white' },
+        { text: '┌──(spyder㉿linux)-[~]', color: 'lime' },
+        { text: '└─$ whoami', color: 'lime' },
+        { text: '==> ŜPÝ*DER🕷', color: 'white' },
+        { text: '┌──(spyder㉿linux)-[~]', color: 'lime' },
+        { text: '└─$ su', color: 'lime' },
+        { text: '[sudo] password for root: ', color: 'white' },
+        { text: 'root@server ~# id', color: 'red' },
+        { text: 'uid=0(root) gid=0(root) groups=0(root)', color: 'white' },
+        { text: 'root@server ~# echo "done!"', color: 'red' },
+        { text: 'root@server ~# echo "Server Down!"', color: 'red' },
+        { text: 'dquote> We are Legion, We do not forgive, We do not forget, We do not forget, Expect us....', color: 'lime' },
+        { text: 'dquote> ctrl+c', color: 'lime' },
+        { text: 'root@server ~# exit ', color: 'red' },
+    ];
+
+    let delay = 500; // Initial delay
+    content.forEach(({ text, color }, index) => {
+        setTimeout(() => {
+            const textLine = document.createElement('div'); 
+             textLine.classList.add('text-line');
+            textLine.textContent = text;
+            textLine.style.color = color; // Set text color dynamically
+            terminalBody.appendChild(textLine);
+        }, delay);
+        delay += 500; // Increase time delay for the next line
+    });
+</script>
+
+<script>
+     class TextScramble {
+constructor(el) {
+this.el = el
+this.chars = '!@#$%^&*()_-=+{}:"|<>?,./;'
+this.update = this.update.bind(this)
+}
+setText(newText) {
+const oldText = this.el.innerText
+const length = Math.max(oldText.length, newText.length)
+const promise = new Promise((resolve) => this.resolve = resolve)
+this.queue = []
+for (let i = 0; i < length; i++) {
+  const from = oldText[i] || ''
+  const to = newText[i] || ''
+  const start = Math.floor(Math.random() * 40)
+  const end = start + Math.floor(Math.random() * 40)
+  this.queue.push({ from, to, start, end })
+}
+cancelAnimationFrame(this.frameRequest)
+this.frame = 0
+this.update()
+return promise
+}
+update() {
+let output = ''
+let complete = 0
+for (let i = 0, n = this.queue.length; i < n; i++) {
+  let { from, to, start, end, char } = this.queue[i]
+  if (this.frame >= end) {
+    complete++
+    output += to
+  } else if (this.frame >= start) {
+    if (!char || Math.random() < 0.28) {
+      char = this.randomChar()
+      this.queue[i].char = char
+    }
+    output += `<span class="glitch">${char}</span>`
+  } else {
+    output += from
+  }
+}
+this.el.innerHTML = output
+if (complete === this.queue.length) {
+  this.resolve()
+} else {
+  this.frameRequest = requestAnimationFrame(this.update)
+  this.frame++
+}
+}
+randomChar() {
+return this.chars[Math.floor(Math.random() * this.chars.length)]
+}
+}
+
+const phrases = [
+'We Are ŜPÝ*WørrïørBD🕷.',
+'Our crime is our curiosity.',
+'Our crime is that of judging people by what they say and think, not what they look like.',
+'Our crime is that of outsmarting you, something that you will never forgive us for.',
+'We are hackers, and this is our manifesto.',
+'You may stop this individual, but you cant stop us all...',
+'After all, were all alike.',
+'Do not understimate Bangladeshi Hackers',
+<!--'Copyright 2025 ©️ ŜPÝ*WørrïørBD'-->
+]
+
+const el = document.querySelector('.text')
+const fx = new TextScramble(el)
+
+let counter = 0
+const next = () => {
+fx.setText(phrases[counter]).then(() => {
+setTimeout(next, 1500)
+})
+counter = (counter + 1) % phrases.length
+}
+
+next()
+
+'use strict';
+
+var app = {
+chars: ['ŜPÝ🕷WørrïørBD','ŜPÝ🕷DER','127.0.0.1','ŜPÝ🕷Wolf','0x523344',
+'Localhost','ŜPÝ🕷ReVeN','HACKED!','Security','Breached!','System','🕷'],
+
+init: function () {
+app.leftContainer = document.createElement('div');
+app.leftContainer.className = 'animation-container left';
+document.body.appendChild(app.leftContainer);
+
+app.rightContainer = document.createElement('div');
+app.rightContainer.className = 'animation-container right';
+document.body.appendChild(app.rightContainer);
+
+window.setInterval(app.add, 100);
+},
+
+add: function () {
+var elementLeft = document.createElement('span');
+var elementRight = document.createElement('span');
+
+app.leftContainer.appendChild(elementLeft);
+app.rightContainer.appendChild(elementRight);
+
+app.animate(elementLeft, "left");
+app.animate(elementRight, "right");
+},
+
+animate: function (element, side) {
+var character = app.chars[Math.floor(Math.random() * app.chars.length)];
+var duration = Math.floor(Math.random() * 15) + 1;
+var offset = Math.floor(Math.random() * (50 - duration * 2)) + 3;
+var size = 10 + (15 - duration);
+
+element.style.cssText = `${side === "left" ? "left" : "right"}:${offset}vw; font-size:${size}px; animation-duration:${duration}s`;
+element.innerHTML = character;
+
+window.setTimeout(app.remove, duration * 1000, element);
+},
+
+remove: function (element) {
+element.parentNode.removeChild(element);
+},
+};
+document.addEventListener('DOMContentLoaded', app.init);
+</script> 
+
+ <footer>
+  &copy; 2025 ŜPÝ*WørrïørBD. All rights reserved. 
+ </footer>
   <script>
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
