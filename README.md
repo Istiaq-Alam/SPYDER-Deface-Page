@@ -95,6 +95,8 @@ This page is intended for **educational purposes only** and aims to:
 ![Image](https://github.com/user-attachments/assets/bf657d1e-2f13-4ef5-a423-56b1f2aa505e)
 ![Image](https://github.com/user-attachments/assets/caaea55a-e007-4b7b-a3cd-f61a9f08ac97)
 
+## Mobile Browser (Responsive)
+![Image](https://github.com/user-attachments/assets/62de8faa-73a2-4437-a06b-ac1ea8759b04)
 
 ## Screenshot in TOR Browser [If No-Script Enable]
 ![Image](https://github.com/user-attachments/assets/662ff8d7-c9e5-4924-83d9-ff1758d1c66f)
