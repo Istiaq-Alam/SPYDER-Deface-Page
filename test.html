@@ -12,25 +12,398 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       background: rgb(0, 0, 0);
       height: 100%;
       font-family: monospace;
       color: rgb(2, 255, 2);
+      user-select: none; /* Prevent Text Selection */
     }
     canvas {
       display: block;
     }
-    h1 {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgb(255, 255, 255);
-      font-family: Hacked;
-      font-size: 3em;
-      text-shadow: 0 0 20px #0f0;
-      z-index: 10;
-    }
+
+    .terminal-container {
+            width: 80%;
+            max-width: 1000px;
+            background-color: #000000;
+            border: 2px solid rgba(0, 255, 0, 0.8);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            animation: openTerminal 2s ease-out forwards;
+            opacity: 0;
+        }
+        .h1 {
+            font-family: 'HACKED', sans-serif;
+            color: #0f0;
+            text-align: center; /* Center the text horizontally */
+            margin-bottom: 20px; /* Space between the heading and terminal */
+            animation: glitch 2s infinite;
+        }
+        @keyframes glitch {
+        0% {
+          text-shadow: 2px 2px #ff0000, -2px -2px #0000ff;
+        }
+        25% {
+          text-shadow: -2px 2px #00ff00, 2px -2px #ff00ff;
+        }
+        50% {
+          text-shadow: 2px -2px #ffff00, -2px 2px #00ffff;
+        }
+        75% {
+          text-shadow: -2px -2px #ff0000, 2px 2px #0000ff;
+        }
+        100% {
+          text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff;
+        }
+      }
+        @keyframes openTerminal {
+            0% {
+                transform: scaleY(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        }
+        .terminal-header {
+            background-color: #111;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+        .terminal-body {
+            padding: 20px;
+            color: rgba(0, 255, 0, 0.8);
+            line-height: 1.5;
+            height: 630px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .text-line {
+            opacity: 0;
+            animation:
+            typing 2s steps(30) forwards,
+            fadeIn 1s ease-in forwards;
+            
+        }
+
+        @keyframes fadeIn {
+          0% { opacity: 0;  /*transform: scale(0.9); */ }
+          100% { opacity: 1; /*transform: scale(1); */ }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .p2 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-align: center;
+            font-size: 10px; 
+        }   
+        .align{
+            color: rgb(0, 255, 0);
+            display: block;
+            height: 110px;
+            width: 400px;
+            font-size: 30px;
+            line-height: 40%;
+            float: right;
+        }
+        .but{
+            color: rgb(0, 255, 0);
+            background-color: transparent;
+            border: none;
+            font-size: 15px;
+            float: right;
+        }
+        .img{
+            float:left;
+            width: 20px;
+            height: 20px;
+            /* border-radius: 100%; */
+        }
+        .h1{
+            font-family: 'HACKED', sans-serif;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            z-index: 0; /* Stays above the background but below content */
+        }
+        .text {
+          font-weight: 100;
+          font-size: 28px;
+          color: #00ff15;
+          font-family: Iceland;
+          text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+  
+        }
+      .glitch {
+          color: #ff0000;
+        }
+        .logo {
+          width: 300px;
+          height: 300px;
+        }
+        @media (min-width: 481px) and (max-width: 768px) {
+            .terminal-container {
+                width: 90%;
+            }
+
+            .terminal-header {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .terminal-body {
+                padding: 15px;
+                height: 66vh;
+                font-size: 12px;
+            }
+
+            .but {
+                font-size: 12px;
+            }
+            .p2 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-align: center;
+            font-size: 5px;
+            }   
+            .align{
+            color: rgb(0, 255, 0);
+            display: block;
+            height: 80px;
+            width: 200px;
+            font-size: 35px;
+            line-height: 20%;
+            float: right;
+            }
+            .h1{
+                font-size: 30px; 
+            } 
+            .text {
+            font-weight: 100;
+            font-size: 25px;
+            color: #00ff15;
+            font-family: Iceland;
+            text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+            }
+            .logo {
+            width: 200px;
+            height: 200px;
+            }
+        }
+        @media (min-width: 100px) and (max-width: 480px) {
+            body {
+            margin: 20px;   
+            }
+            .terminal-container {
+                width: 100%;
+            }
+
+            .terminal-header {
+                font-size: 10px;
+                padding: 6px;
+            }
+
+            .terminal-body {
+                height: 55vh;
+                font-size: 9px;
+            }
+
+            .but {
+                font-size: 9px;
+            }
+            .p2 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-align: center;
+            font-size: 3px;
+            color: rgb(0, 255, 0);
+            display: block;
+            float: right;
+            }   
+            .align{
+            height: 30px;
+            width: 150px;
+            font-size: 20px;
+            line-height: 21%;
+            }
+            .h1{
+                font-size: 19px;
+            }
+            .text {
+            font-weight: 100;
+            font-size: 15px;
+            color: #00ff15;
+            font-family: Iceland;
+            text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+            }
+            .img{
+            float:left;
+            width: 15px;
+            height: 15px;
+            /* border-radius: 100%; */
+            }
+            .logo {
+            width: 100px;
+            height: 100px;
+            }
+        }
+
+.animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.animation-container span {
+  color: rgb(255, 0, 0);
+  display: block;
+  font-size: 18px;
+  font-family: Iceland;
+  text-shadow: 0 0 1px rgb(221, 55, 55);
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  cursor: default;
+  z-index: 10;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-timing-function: ease-out;
+  animation-name: move;
+}
+
+/*Moving merquee words*/
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+/* Fullscreen Loading Screen */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 1000%;
+    background: rgba(0, 0, 0, 0.671);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; } /* Adjust opacity for blinking effect */
+    100% { opacity: 1; }
+}
+/* Green Box Around Loading */
+.loading-box {
+    border: 4px solid rgb(114, 209, 102);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: blink 0.20s infinite alternate;
+}
+/* Red Box Around Loading */
+.loading-box2 {
+    border: 4px solid rgb(255, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: blink 0.20s infinite alternate;
+}
+
+/* Loading Text */
+.loading-text {
+    font-family: 'Hack', monospace;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(202, 31, 31);
+    margin-bottom: 30px;
+}
+
+/* Progress Bar Container */
+.progress-bar {
+    width: 250px;
+    height: 20px;
+    border: 2px solid rgb(0, 255, 0);
+    background: rgba(0, 0, 0, 0.87);
+    overflow: hidden;
+}
+.progress-bar2 {
+    width: 250px;
+    height: 20px;
+    border: 2px solid rgb(0, 255, 0);
+    background: rgba(60, 255, 0, 0.87);
+    overflow: hidden;
+}
+/* Animated Progress */
+.progress {
+    width: 0%;
+    height: 100%;
+    background: limegreen;
+    animation: loading 0.5s linear forwards;
+}
+.progress2 {
+    width: 0%;
+    height: 100%;
+    background: rgb(255, 0, 0);
+    animation: loading 0.5s linear forwards;
+}
+/* Loading Animation */
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+footer {
+    width: 100%;
+    font-size: 10px;
+    color: rgb(123, 255, 0);
+    text-align: center;
+    padding: 30px 0;
+    font-family: Hack;
+    text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+}
+
+
+    
   </style>
 </head>
 <body>
