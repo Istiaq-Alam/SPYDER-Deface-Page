@@ -9,17 +9,27 @@
     <link rel="icon" type="image/png" href="https://abs.twimg.com/emoji/v2/72x72/1f577.png">
     <style>
       body { 
-            margin: 50px;
-            padding: 0px;   
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center; 
-            font-family: monospace;
-            color: #0f0;
-            user-select: none; /* Prevent Text Selection */
+        margin: 50px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        height: 100%;
+        overflow: hidden;
+        font-family: monospace;
+        color: rgb(0, 255, 0);
+        user-select: none; /* Prevent Text Selection */
         }
+    canvas {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        pointer-events: none;
+      }
        
         .terminal-container {
             width: 80%;
@@ -420,11 +430,11 @@ footer {
     font-family: Hack;
     text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
 }
-
     </style>
 </head>
 
 <body oncontextmenu="return false;">
+    <canvas id="matrix"></canvas>
   <!--New Loading Screen-->
 <div id="loading-screen">
   <div class="loading-box2">
@@ -459,9 +469,9 @@ footer {
         <div class="terminal-header">
             <image class="img" src="https://icon-library.com/images/terminal-icon/terminal-icon-4.jpg">
             <span>Tost from SPY*WorriorBD - terminal</span>
-            <a href="index.html"><button class="but">&times;</button></a>
-            <a href="index.html"><button class="but">&square;</button></a>
-            <a href="index.html"><button class="but">&boxh;</button></a>
+            <a href="randian.html"><button class="but">&times;</button></a>
+            <a href="randian.html"><button class="but">&square;</button></a>
+            <a href="randian.html"><button class="but">&boxh;</button></a>
         </div>
         
         <div class="terminal-body" id="terminalBody">
@@ -506,32 +516,6 @@ footer {
 });
     </script>
 
-    <script>
-        const backgrounds = [
-         /* 'https://gifdb.com/images/high/matrix-code-scary-face-loop-5tvidy2hcuzudzvb.webp',
-            'https://gifdb.com/images/high/matrix-code-hacking-binary-scalar-hqj7vegelavwt395.webp',
-            'https://i.gifer.com/133C.gif',
-            'https://gifdb.com/images/high/raining-soft-matrix-code-hb6iao1lji7py2ks.webp',
-            'https://i.giphy.com/12W5Sg2koWYnwA.webp',
-            'https://i.gifer.com/758a.gif',*/
-            'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHQxMjlja3Judnp0MHYwNGczbzB3MXhzbDVkYmNreWFjY2VnNGRodiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r9zAl4fMw6OefW8wwp/giphy.gif', 
-            'https://media1.giphy.com/media/YFI7M6tOGhWh5gguL1/giphy.gif',
-            'https://a-z-animals.com/media/2022/12/shutterstock_1975087202.jpg',
-            'https://thesudantimes.com/wp-content/uploads/2023/10/palestine-ap_327669110451-1024x576.jpg',
-            'https://www.kalima.org.au/wp-content/uploads/2020/04/download-34.jpeg',
-            
-            
-
-        ];
-        
-       backgrounds.forEach((url) => {
-        const img = new Image();
-        img.src = url;
-        }); 
-
-        const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-        document.body.style.backgroundImage = `url('${randomBackground}')`;
-    </script> 
 
     <script>
       
@@ -561,7 +545,7 @@ footer {
             { text: '==> ŜPÝ*DER🕷 Stand with Palestine', color: 'white' },
             { text: '┌──(spyder㉿linux)-[~]', color: 'lime' },
             { text: '└─$ su', color: 'lime' },
-            { text: '[sudo] password for root: FUCK→Israel←FUCK ', color: 'white' },
+            { text: '[sudo] password for root: FUCK→India←FUCK ', color: 'white' },
             { text: 'root@server ~# echo "You are not Safe from us!!"', color: 'red' },
             { text: 'root@server ~# echo "We stand with the children of Gaza, with every mother, every soul lost"', color: 'red' },
             { text: 'dquote> From the river to the sea, Palestine will be free.', color: 'lime' },
@@ -714,5 +698,53 @@ document.addEventListener('DOMContentLoaded', app.init);
      <footer>
       &copy; 2025 ŜPÝ*WørrïørBD. All rights reserved. 
      </footer>
+
+     <script>
+        const canvas = document.getElementById("matrix");
+        const ctx = canvas.getContext("2d");
+    
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    
+        const letters = "アァイィウヴエカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        const fontSize = 12;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+     
+        for (let x = 0; x < columns; x++) {
+          drops[x] = 1;
+        }
+    
+        let hue = 120;
+    
+        function draw() {
+          ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+          ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+          ctx.font = fontSize + "px monospace";
+    
+          for (let i = 0; i < drops.length; i++) {
+            const text = letters.charAt(Math.floor(Math.random() * letters.length));
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+    
+            drops[i]++;
+          }
+    
+          hue += 0.5; // Slowly cycle through colors
+          if (hue >= 360) hue = 0;
+        }
+    
+        setInterval(draw, 33);
+    
+        window.addEventListener("resize", () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        });
+      </script>
 </body>
 </html>
