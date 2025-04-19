@@ -30,7 +30,7 @@
         overflow: hidden;
         font-family: monospace;
         color: rgb(0, 255, 0);
-        user-select: none; /* Prevent Text Selection */
+        user-select: none; 
         }
     canvas {
         display: block;
@@ -55,8 +55,8 @@
         .h1 {
             font-family: 'HACKED', sans-serif;
             color: #0f0;
-            text-align: center; /* Center the text horizontally */
-            margin-bottom: 20px; /* Space between the heading and terminal */
+            text-align: center; 
+            margin-bottom: 20px; 
             animation: glitch 2s infinite;
         }
         @keyframes glitch {
@@ -110,8 +110,8 @@
         }
 
         @keyframes fadeIn {
-          0% { opacity: 0;  /*transform: scale(0.9); */ }
-          100% { opacity: 1; /*transform: scale(1); */ }
+          0% { opacity: 0;   }
+          100% { opacity: 1; }
         }
 
         @keyframes typing {
@@ -143,7 +143,6 @@
             float:left;
             width: 20px;
             height: 20px;
-            /* border-radius: 100%; */
         }
         .h1{
             font-family: 'HACKED', sans-serif;
@@ -154,8 +153,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Black overlay with 30% opacity */
-            z-index: 0; /* Stays above the background but below content */
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0; 
         }
         .text {
           font-weight: 100;
@@ -293,7 +292,6 @@
             float:left;
             width: 15px;
             height: 15px;
-            /* border-radius: 100%; */
             }
             .banner{
              height: 25px;
@@ -331,7 +329,7 @@
   animation-name: move;
 }
 
-/*Moving merquee words*/
+
 @keyframes move {
   0% {
     opacity: 0;
@@ -355,7 +353,7 @@
   }
 }
 
-/* Fullscreen Loading Screen */
+
 #loading-screen {
     position: fixed;
     width: 100%;
@@ -368,10 +366,10 @@
 }
 @keyframes blink {
     0% { opacity: 1; }
-    50% { opacity: 0.3; } /* Adjust opacity for blinking effect */
+    50% { opacity: 0.3; } 
     100% { opacity: 1; }
 }
-/* Green Box Around Loading */
+
 .loading-box {
     border: 4px solid rgb(114, 209, 102);
     padding: 20px;
@@ -381,7 +379,7 @@
     justify-content: center;
     animation: blink 0.20s infinite alternate;
 }
-/* Red Box Around Loading */
+
 .loading-box2 {
     border: 4px solid rgb(255, 0, 0);
     padding: 20px;
