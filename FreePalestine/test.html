@@ -8,457 +8,557 @@
     ╚══════╝╚═╝        ╚═╝         ╚═════╝ ╚══════╝╚═╝  ╚═╝  
                                     from SPY*WorriorBD   -->
 <!--So Stop wasting your time Randian Kiddos..-->
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.cdnfonts.com/css/hacked" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
-    <title>HACKED BY SPY*WarriorBD</title>
-    <link rel="icon" type="image/png" href="https://abs.twimg.com/emoji/v2/72x72/1f577.png">
-    <style>
-      body { 
-        margin: 50px;
-        padding: 0px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        background: rgb(0, 0, 0);
-        height: 100%;
-        overflow: hidden;
-        font-family: monospace;
-        color: rgb(0, 255, 0);
-        user-select: none; 
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/hacked" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+  <title>HACKED BY SPY*WarriorBD</title>
+  <link rel="icon" type="image/png" href="https://abs.twimg.com/emoji/v2/72x72/1f577.png">
+  <style>
+    body {
+      margin: 50px;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      height: 100%;
+      overflow: hidden;
+      font-family: monospace;
+      color: rgb(0, 255, 0);
+      user-select: none;
+    }
+
     canvas {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .terminal-container {
+      width: 80%;
+      max-width: 1000px;
+      background-color: #000000;
+      border: 2px solid rgba(0, 255, 0, 0.8);
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+      border-radius: 10px;
+      overflow: hidden;
+      animation: openTerminal 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    .h1 {
+      font-family: 'HACKED', sans-serif;
+      color: #0f0;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 2px #ff0000, -2px -2px #0000ff;
+      }
+
+      25% {
+        text-shadow: -2px 2px #00ff00, 2px -2px #ff00ff;
+      }
+
+      50% {
+        text-shadow: 2px -2px #ffff00, -2px 2px #00ffff;
+      }
+
+      75% {
+        text-shadow: -2px -2px #ff0000, 2px 2px #0000ff;
+      }
+
+      100% {
+        text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff;
+      }
+    }
+
+    @keyframes openTerminal {
+      0% {
+        transform: scaleY(0);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    .terminal-header {
+      background-color: #111;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .terminal-body {
+      padding: 20px;
+      color: rgba(0, 255, 0, 0.8);
+      line-height: 1.5;
+      height: 600px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .text-line {
+      opacity: 0;
+      animation:
+        typing 2s steps(30) forwards,
+        fadeIn 1s ease-in forwards;
+
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    .p2 {
+      font-family: "Lucida Console", "Courier New", monospace;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .align {
+      color: rgb(0, 255, 0);
+      display: block;
+      height: 110px;
+      width: 400px;
+      font-size: 30px;
+      line-height: 40%;
+      float: right;
+    }
+
+    .but {
+      color: rgb(0, 255, 0);
+      background-color: transparent;
+      border: none;
+      font-size: 15px;
+      float: right;
+    }
+
+    .img {
+      float: left;
+      width: 20px;
+      height: 20px;
+    }
+
+    .h1 {
+      font-family: 'HACKED', sans-serif;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
+
+    .text {
+      font-weight: 100;
+      font-size: 28px;
+      color: #00ff15;
+      font-family: Iceland;
+      text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+
+    }
+
+    .glitch {
+      color: #ff0000;
+    }
+
+    .banner {
+      height: 70px;
+      width: 200px;
+    }
+
+    .log {
+      width: 300px;
+      height: 300px;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+    }
+
+    .logo-float {
+      position: absolute;
+      top: 20%;
+      transform: translateY(-50%);
+      width: 150px;
+      border-radius: 100px;
+      opacity: 0.9;
+      z-index: 2;
+    }
+
+    .left-logo {
+      left: 100px;
+    }
+
+    .right-logo {
+      right: 100px;
+    }
+
+    .logo-float {
+      filter: drop-shadow(0 0 8px limegreen);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-float:hover {
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    @media (min-width: 1024px) {
+      body {
+        margin: 5px;
+      }
+
+      .terminal-body {
+        height: 67vh;
+        font-size: 12px;
+        overflow: hidden;
+      }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .terminal-container {
+        width: 90%;
+      }
+
+      .terminal-header {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .terminal-body {
+        padding: 15px;
+        height: 66vh;
+        font-size: 12px;
+      }
+
+      .but {
+        font-size: 12px;
+      }
+
+      .p2 {
+        font-family: "Lucida Console", "Courier New", monospace;
+        text-align: center;
+        font-size: 5px;
+      }
+
+      .align {
+        color: rgb(0, 255, 0);
         display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -2;
-        pointer-events: none;
+        height: 80px;
+        width: 200px;
+        font-size: 35px;
+        line-height: 20%;
+        float: right;
       }
-       
-        .terminal-container {
-            width: 80%;
-            max-width: 1000px;
-            background-color: #000000; 
-            border: 2px solid rgba(0, 255, 0, 0.8);
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
-            border-radius: 10px;
-            overflow: hidden;
-            animation: openTerminal 2s ease-out forwards;
-            opacity: 0;
-        }
-        .h1 {
-            font-family: 'HACKED', sans-serif;
-            color: #0f0;
-            text-align: center; 
-            margin-bottom: 20px; 
-            animation: glitch 2s infinite;
-        }
-        @keyframes glitch {
-        0% {
-          text-shadow: 2px 2px #ff0000, -2px -2px #0000ff;
-        }
-        25% {
-          text-shadow: -2px 2px #00ff00, 2px -2px #ff00ff;
-        }
-        50% {
-          text-shadow: 2px -2px #ffff00, -2px 2px #00ffff;
-        }
-        75% {
-          text-shadow: -2px -2px #ff0000, 2px 2px #0000ff;
-        }
-        100% {
-          text-shadow: 2px 2px #00ff00, -2px -2px #ff00ff;
-        }
+
+      .h1 {
+        font-size: 30px;
       }
-        @keyframes openTerminal {
-            0% {
-                transform: scaleY(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scaleY(1);
-                opacity: 1;
-            }
-        }
-        .terminal-header {
-            background-color: #111;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            text-align: center;
-        }
-        .terminal-body {
-            padding: 20px;
-            color: rgba(0, 255, 0, 0.8);
-            line-height: 1.5;
-            height: 600px;
-            overflow-y: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        .text-line {
-            opacity: 0;
-            animation:
-            typing 2s steps(30) forwards,
-            fadeIn 1s ease-in forwards;
-            
-        }
 
-        @keyframes fadeIn {
-          0% { opacity: 0;   }
-          100% { opacity: 1; }
-        }
+      .text {
+        font-weight: 100;
+        font-size: 25px;
+        color: #00ff15;
+        font-family: Iceland;
+        text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+      }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        .p2 {
-            font-family: "Lucida Console", "Courier New", monospace;
-            text-align: center;
-            font-size: 10px; 
-        }   
-        .align{
-            color: rgb(0, 255, 0);
-            display: block;
-            height: 110px;
-            width: 400px;
-            font-size: 30px;
-            line-height: 40%;
-            float: right;
-        }
-        .but{
-            color: rgb(0, 255, 0);
-            background-color: transparent;
-            border: none;
-            font-size: 15px;
-            float: right;
-        }
-        .img{
-            float:left;
-            width: 20px;
-            height: 20px;
-        }
-        .h1{
-            font-family: 'HACKED', sans-serif;
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 0; 
-        }
-        .text {
-          font-weight: 100;
-          font-size: 28px;
-          color: #00ff15;
-          font-family: Iceland;
-          text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
-   
-        }
-      .glitch {
-          color: #ff0000;
-        }
-        .banner{
-          height: 70px;
-          width: 200px;
-        }
-        .log {
-          width: 300px;
-          height: 300px;
-        }
-        .logo {
-          width: 70px;
-          height:70px;
-        }
+      .banner {
+        height: 60px;
+        width: 160px;
+      }
 
-        @media (min-width: 1024px)  {
-          body {
-          margin: 5px;
-         }
-          .terminal-body{
-            height: 67vh;
-            font-size: 12px;
-            overflow: hidden;
-          }
-        }
+      .log {
+        width: 200px;
+        height: 200px;
+      }
+    }
 
-        @media (min-width: 481px) and (max-width: 768px) {
-            .terminal-container {
-                width: 90%;
-            }
+    @media (min-width: 100px) and (max-width: 480px) {
+      body {
+        margin: 20px;
+      }
 
-            .terminal-header {
-                font-size: 14px;
-                padding: 8px;
-            }
+      .terminal-container {
+        width: 100%;
+      }
 
-            .terminal-body {
-                padding: 15px;
-                height: 66vh;
-                font-size: 12px;
-            }
+      .terminal-header {
+        font-size: 10px;
+        padding: 6px;
+      }
 
-            .but {
-                font-size: 12px;
-            }
-            .p2 {
-            font-family: "Lucida Console", "Courier New", monospace;
-            text-align: center;
-            font-size: 5px;
-            }   
-            .align{
-            color: rgb(0, 255, 0);
-            display: block;
-            height: 80px;
-            width: 200px;
-            font-size: 35px;
-            line-height: 20%;
-            float: right;
-            }
-            .h1{
-                font-size: 30px; 
-            } 
-            .text {
-            font-weight: 100;
-            font-size: 25px;
-            color: #00ff15;
-            font-family: Iceland;
-            text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
-            }
-            .banner{
-             height: 60px;
-             width: 160px;
-            }
-            .log {
-            width: 200px;
-            height: 200px;
-            }
-        }
-        @media (min-width: 100px) and (max-width: 480px) {
-            body {
-            margin: 20px;   
-            }
-            .terminal-container {
-                width: 100%;
-            }
+      .terminal-body {
+        height: 55vh;
+        font-size: 9px;
+      }
 
-            .terminal-header {
-                font-size: 10px;
-                padding: 6px;
-            }
+      .but {
+        font-size: 9px;
+      }
 
-            .terminal-body {
-                height: 55vh;
-                font-size: 9px;
-            }
+      .p2 {
+        font-family: "Lucida Console", "Courier New", monospace;
+        text-align: center;
+        font-size: 3px;
+        color: rgb(0, 255, 0);
+        display: block;
+        float: right;
+      }
 
-            .but {
-                font-size: 9px;
-            }
-            .p2 {
-            font-family: "Lucida Console", "Courier New", monospace;
-            text-align: center;
-            font-size: 3px;
-            color: rgb(0, 255, 0);
-            display: block;
-            float: right;
-            }   
-            .align{
-            height: 30px;
-            width: 150px;
-            font-size: 20px;
-            line-height: 21%;
-            }
-            .h1{
-                font-size: 19px;
-            }
-            .text {
-            font-weight: 100;
-            font-size: 15px;
-            color: #00ff15;
-            font-family: Iceland;
-            text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
-            }
-            .img{
-            float:left;
-            width: 15px;
-            height: 15px;
-            }
-            .banner{
-             height: 25px;
-             width: 80px;
-            }
-            .log {
-            width: 100px;
-            height: 100px;
-            }
-        }
+      .align {
+        height: 30px;
+        width: 150px;
+        font-size: 20px;
+        line-height: 21%;
+      }
 
-.animation-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
+      .h1 {
+        font-size: 19px;
+      }
 
-.animation-container span {
-  color: rgb(255, 0, 0);
-  display: block;
-  font-size: 18px;
-  font-family: Iceland;
-  text-shadow: 0 0 1px rgb(221, 55, 55);
-  position: absolute;
-  user-select: none;
-  pointer-events: none;
-  cursor: default;
-  z-index: 10;
-  opacity: 0;
-  will-change: transform, opacity;
-  animation-timing-function: ease-out;
-  animation-name: move;
-}
+      .text {
+        font-weight: 100;
+        font-size: 15px;
+        color: #00ff15;
+        font-family: Iceland;
+        text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+      }
+
+      .img {
+        float: left;
+        width: 15px;
+        height: 15px;
+      }
+
+      .banner {
+        height: 25px;
+        width: 80px;
+      }
+
+      .log {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .animation-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .animation-container span {
+      color: rgb(255, 0, 0);
+      display: block;
+      font-size: 18px;
+      font-family: Iceland;
+      text-shadow: 0 0 1px rgb(221, 55, 55);
+      position: absolute;
+      user-select: none;
+      pointer-events: none;
+      cursor: default;
+      z-index: 10;
+      opacity: 0;
+      will-change: transform, opacity;
+      animation-timing-function: ease-out;
+      animation-name: move;
+    }
 
 
-@keyframes move {
-  0% {
-    opacity: 0;
-    transform: translateY(100vh);
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  90%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-    transform: none;
-  }
-}
+    @keyframes move {
+      0% {
+        opacity: 0;
+        transform: translateY(100vh);
+      }
+
+      25% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      75% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+        transform: none;
+      }
+    }
 
 
-#loading-screen {
-    position: fixed;
-    width: 100%;
-    height: 1000%;
-    background: rgba(0, 0, 0, 0.671);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.3; } 
-    100% { opacity: 1; }
-}
+    #loading-screen {
+      position: fixed;
+      width: 100%;
+      height: 1000%;
+      background: rgba(0, 0, 0, 0.671);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
 
-.loading-box {
-    border: 4px solid rgb(114, 209, 102);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: blink 0.20s infinite alternate;
-}
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
 
-.loading-box2 {
-    border: 4px solid rgb(255, 0, 0);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: blink 0.20s infinite alternate;
-}
+      50% {
+        opacity: 0.3;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .loading-box {
+      border: 4px solid rgb(114, 209, 102);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: blink 0.20s infinite alternate;
+    }
+
+    .loading-box2 {
+      border: 4px solid rgb(255, 0, 0);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: blink 0.20s infinite alternate;
+    }
 
 
-.loading-text {
-    font-family: 'Hack', monospace;
-    font-size: 22px;
-    font-weight: bold;
-    color: rgb(202, 31, 31);
-    margin-bottom: 30px;
-}
+    .loading-text {
+      font-family: 'Hack', monospace;
+      font-size: 22px;
+      font-weight: bold;
+      color: rgb(202, 31, 31);
+      margin-bottom: 30px;
+    }
 
 
-.progress-bar {
-    width: 250px;
-    height: 20px;
-    border: 2px solid rgb(0, 255, 0);
-    background: rgba(0, 0, 0, 0.87);
-    overflow: hidden;
-}
-.progress-bar2 {
-    width: 250px;
-    height: 20px;
-    border: 2px solid rgb(0, 255, 0);
-    background: rgba(60, 255, 0, 0.87);
-    overflow: hidden;
-}
+    .progress-bar {
+      width: 250px;
+      height: 20px;
+      border: 2px solid rgb(0, 255, 0);
+      background: rgba(0, 0, 0, 0.87);
+      overflow: hidden;
+    }
 
-.progress {
-    width: 0%;
-    height: 100%;
-    background: limegreen;
-    animation: loading 0.5s linear forwards;
-}
-.progress2 {
-    width: 0%;
-    height: 100%;
-    background: rgb(255, 0, 0);
-    animation: loading 0.5s linear forwards;
-}
+    .progress-bar2 {
+      width: 250px;
+      height: 20px;
+      border: 2px solid rgb(0, 255, 0);
+      background: rgba(60, 255, 0, 0.87);
+      overflow: hidden;
+    }
 
-@keyframes loading {
-    0% { width: 0%; }
-    100% { width: 100%; }
-}
+    .progress {
+      width: 0%;
+      height: 100%;
+      background: limegreen;
+      animation: loading 0.5s linear forwards;
+    }
 
-footer {
-    width: 100%;
-    font-size: 10px;
-    color: rgb(123, 255, 0);
-    text-align: center;
-    padding: 30px 0;
-    font-family: Hack;
-    text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
-}
-    </style>
+    .progress2 {
+      width: 0%;
+      height: 100%;
+      background: rgb(255, 0, 0);
+      animation: loading 0.5s linear forwards;
+    }
+
+    @keyframes loading {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    footer {
+      width: 100%;
+      font-size: 10px;
+      color: rgb(123, 255, 0);
+      text-align: center;
+      padding: 30px 0;
+      font-family: Hack;
+      text-shadow: 0 0 0.5em rgb(255, 255, 255), 0 0 0.5em rgb(249, 250, 250);
+    }
+  </style>
 </head>
 
 <body oncontextmenu="return false;">
-    <canvas id="matrix"></canvas>
+  <canvas id="matrix"></canvas>
 
-<div id="loading-screen">
-  <div class="loading-box2">
+  <div id="loading-screen">
+    <div class="loading-box2">
       <p class="loading-text">⚠ Access Denied 🚫</p>
-      <div class="progress-bar2"> 
-          <div class="progress2"></div>
+      <div class="progress-bar2">
+        <div class="progress2"></div>
       </div>
+    </div>
   </div>
-</div>
+  <img src="https://i.ibb.co.com/60xNJJmX/spy.jpg" class="logo-float left-logo" alt="logo">
+  <img src="https://i.ibb.co.com/60xNJJmX/spy.jpg" class="logo-float right-logo" alt="logo">
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("loading-screen").innerHTML = `
           <div class="loading-box">
               <p class="loading-text">⚠ Opening Console 🕷</p>
@@ -467,281 +567,285 @@ footer {
               </div>
           </div>
       `;
-  });
-  document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(() => {
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
         document.getElementById("loading-screen").style.display = "none";
-    }, 800); 
-});  
-</script>
-    <div class="overlay"></div>  
-   
-    <h1 class="h1">HACKED BY SPY*WorriorBD ㉿SPY*DER🕷</h1>
-    <div class="terminal-container">
-        <div class="terminal-header">
-            <image class="img" src="https://icon-library.com/images/terminal-icon/terminal-icon-4.jpg">
-            <span>Tost from SPY*WorriorBD - terminal</span>
-            <a href="randian.html"><button class="but">&times;</button></a>
-            <a href="randian.html"><button class="but">&square;</button></a>
-            <a href="randian.html"><button class="but">&boxh;</button></a>
-        </div>
-        
-        <div class="terminal-body" id="terminalBody">
-            <div class="align"> <p class="p2">          
-              <img class="banner" src="https://e.top4top.io/p_31711xnxh1.png">
-            <img class="log" src="https://i.ibb.co.com/9kgYdmSB/ftrts.jpg">
-    </p> </div>
-        </div><br>
-        <div padding="20px" align="center" class="text"></div> <br>  
+      }, 800);
+    });  
+  </script>
+  <div class="overlay"></div>
+
+  <h1 class="h1">HACKED BY SPY*WorriorBD ㉿SPY*DER🕷</h1>
+  <div class="terminal-container">
+
+    <div class="terminal-header">
+      <image class="img" src="https://icon-library.com/images/terminal-icon/terminal-icon-4.jpg">
+        <span>Tost from SPY*WorriorBD - terminal</span>
+        <a href="randian.html"><button class="but">&times;</button></a>
+        <a href="randian.html"><button class="but">&square;</button></a>
+        <a href="randian.html"><button class="but">&boxh;</button></a>
     </div>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-    document.addEventListener("contextmenu", function(event) {
+
+    <div class="terminal-body" id="terminalBody">
+      <div class="align">
+        <p class="p2">
+          <img class="banner" src="https://e.top4top.io/p_31711xnxh1.png">
+          <img class="log" src="https://i.ibb.co.com/9kgYdmSB/ftrts.jpg">
+        </p>
+      </div>
+    </div><br>
+    <div padding="20px" align="center" class="text"></div> <br>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("contextmenu", function (event) {
         event.preventDefault();
-    });
-  
- 
-    document.addEventListener("selectstart", function(event) {
+      });
+
+
+      document.addEventListener("selectstart", function (event) {
         event.preventDefault();
-    });
-    document.addEventListener("keydown", function(event) {
+      });
+      document.addEventListener("keydown", function (event) {
         if (event.ctrlKey && (event.key === "c" || event.key === "x" || event.key === "v" || event.key === "u")) {
-            event.preventDefault();
+          event.preventDefault();
         }
+      });
     });
-});
-    </script>
+  </script>
 
 
-    <script>
-      
-        const terminalBody = document.getElementById('terminalBody');
-        const content = [ 
-            { text: 'We Are ŜPÝ*WørrïørBD🕷', color: 'lime' },
-            { text: 'Hello Randian MATh3RFyCK3R$!,', color: 'white' },
-            { text: '[HTTP_ACCEPT_ENCODING] => gzip, deflate', color: 'green' },
-            { text: '[HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.8', color: 'green' },
-            { text: '[SERVER_PROTOCOL] => HTTP/1.1', color: 'green' },
-            { text: '', color: 'white' },
-            { text: 'Array', color: 'magenta' },
-            { text: '{', color: 'magenta' },
-            { text: '    Your System has been hacked by ŜPÝ*WørrïørBD. ', color: 'red' },
-            { text: '    From Gaza to Gujarat — We Rise as One & We will strike back harder.', color: 'cyan' },
-            { text: '    We will continue our offense and dismantle your cyber space piece by piece.', color: 'cyan' },
-            { text: '    You demolish our Mosques. We raise minarets in our hearts.', color: 'cyan' },
-            { text: '    You burn our homes. We rebuild with fire in our soul.', color: 'cyan' },
-            { text: '    Your saffron hate cannot silence our green truth.', color: 'red' },
-            { text: '    From the ashes of injustice, we rise united — stronger, louder, unbroken.', color: 'red' },
-            { text: '    We are fucking your cyber space. Remember us.', color: 'white' },
-            { text: '    If possible, prevent our cyber attacks.', color: 'lime' },
-            { text: '}', color: 'magenta' },
-            { text: '', color: 'white' },
-            { text: '┌──(spyder㉿linux)-[~]', color: 'lime' },
-            { text: '└─$ whoami', color: 'lime' },
-            { text: '==> ŜPÝ*DER🕷 Stand with Palestine', color: 'white' },
-            { text: '┌──(spyder㉿linux)-[~]', color: 'lime' },
-            { text: '└─$ su', color: 'lime' },
-            { text: '[sudo] password for root: FUCK→India←FUCK ', color: 'white' },
-            { text: 'root@server ~# echo "You are not Safe from us!!"', color: 'red' },
-            { text: 'root@server ~# echo "The world is watching. Truth is marching. Tyranny will fall."', color: 'red' },
-            { text: 'dquote> You silence Muslims in courts, streets, and news — but not on the internet. Not in the hearts of billions..', color: 'lime' },
-            { text: 'dquote> We don\'t forget. We don\'t forgive. We stand with Islam.', color: 'lime' },
-            { text: 'root@server ~# exit ', color: 'red' },
-        ];
-    
-        let delay = 500; // Initial delay
-        content.forEach(({ text, color }, index) => {
-            setTimeout(() => {
-                const textLine = document.createElement('div'); 
-                 textLine.classList.add('text-line');
-                textLine.textContent = text;
-                textLine.style.color = color; 
-                terminalBody.appendChild(textLine);
-            }, delay);
-            delay += 500; 
-        });
-    </script>
+  <script>
 
-    <script>
-         class TextScramble {
-  constructor(el) {
-    this.el = el
-    this.chars = '!@#$%^&*()_-=+{}:"|<>?,./;'
-    this.update = this.update.bind(this)
-  }
-  setText(newText) {
-    const oldText = this.el.innerText
-    const length = Math.max(oldText.length, newText.length)
-    const promise = new Promise((resolve) => this.resolve = resolve)
-    this.queue = []
-    for (let i = 0; i < length; i++) {
-      const from = oldText[i] || ''
-      const to = newText[i] || ''
-      const start = Math.floor(Math.random() * 40)
-      const end = start + Math.floor(Math.random() * 40)
-      this.queue.push({ from, to, start, end })
-    }
-    cancelAnimationFrame(this.frameRequest)
-    this.frame = 0
-    this.update()
-    return promise
-  }
-  update() {
-    let output = ''
-    let complete = 0
-    for (let i = 0, n = this.queue.length; i < n; i++) {
-      let { from, to, start, end, char } = this.queue[i]
-      if (this.frame >= end) {
-        complete++
-        output += to
-      } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
-          char = this.randomChar()
-          this.queue[i].char = char
+    const terminalBody = document.getElementById('terminalBody');
+    const content = [
+      { text: 'We Are ŜPÝ*WørrïørBD🕷', color: 'lime' },
+      { text: 'Hello Randian MATh3RFyCK3R$!,', color: 'white' },
+      { text: '[HTTP_ACCEPT_ENCODING] => gzip, deflate', color: 'green' },
+      { text: '[HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.8', color: 'green' },
+      { text: '[SERVER_PROTOCOL] => HTTP/1.1', color: 'green' },
+      { text: '', color: 'white' },
+      { text: 'Array', color: 'magenta' },
+      { text: '{', color: 'magenta' },
+      { text: '    Your System has been hacked by ŜPÝ*WørrïørBD. ', color: 'red' },
+      { text: '    From Gaza to Gujarat — We Rise as One & We will strike back harder.', color: 'cyan' },
+      { text: '    We will continue our offense and dismantle your cyber space piece by piece.', color: 'cyan' },
+      { text: '    You demolish our Mosques. We raise minarets in our hearts.', color: 'cyan' },
+      { text: '    You burn our homes. We rebuild with fire in our soul.', color: 'cyan' },
+      { text: '    Your saffron hate cannot silence our green truth.', color: 'red' },
+      { text: '    From the ashes of injustice, we rise united — stronger, louder, unbroken.', color: 'red' },
+      { text: '    We are fucking your cyber space. Remember us.', color: 'white' },
+      { text: '    If possible, prevent our cyber attacks.', color: 'lime' },
+      { text: '}', color: 'magenta' },
+      { text: '', color: 'white' },
+      { text: '┌──(spyder㉿linux)-[~]', color: 'lime' },
+      { text: '└─$ whoami', color: 'lime' },
+      { text: '==> ŜPÝ*DER🕷 Stand with Palestine', color: 'white' },
+      { text: '┌──(spyder㉿linux)-[~]', color: 'lime' },
+      { text: '└─$ su', color: 'lime' },
+      { text: '[sudo] password for root: FUCK→India←FUCK ', color: 'white' },
+      { text: 'root@server ~# echo "You are not Safe from us!!"', color: 'red' },
+      { text: 'root@server ~# echo "The world is watching. Truth is marching. Tyranny will fall."', color: 'red' },
+      { text: 'dquote> You silence Muslims in courts, streets, and news — but not on the internet. Not in the hearts of billions..', color: 'lime' },
+      { text: 'dquote> We don\'t forget. We don\'t forgive. We stand with Islam.', color: 'lime' },
+      { text: 'root@server ~# exit ', color: 'red' },
+    ];
+
+    let delay = 500; // Initial delay
+    content.forEach(({ text, color }, index) => {
+      setTimeout(() => {
+        const textLine = document.createElement('div');
+        textLine.classList.add('text-line');
+        textLine.textContent = text;
+        textLine.style.color = color;
+        terminalBody.appendChild(textLine);
+      }, delay);
+      delay += 500;
+    });
+  </script>
+
+  <script>
+    class TextScramble {
+      constructor(el) {
+        this.el = el
+        this.chars = '!@#$%^&*()_-=+{}:"|<>?,./;'
+        this.update = this.update.bind(this)
+      }
+      setText(newText) {
+        const oldText = this.el.innerText
+        const length = Math.max(oldText.length, newText.length)
+        const promise = new Promise((resolve) => this.resolve = resolve)
+        this.queue = []
+        for (let i = 0; i < length; i++) {
+          const from = oldText[i] || ''
+          const to = newText[i] || ''
+          const start = Math.floor(Math.random() * 40)
+          const end = start + Math.floor(Math.random() * 40)
+          this.queue.push({ from, to, start, end })
         }
-        output += `<span class="glitch">${char}</span>`
-      } else {
-        output += from
+        cancelAnimationFrame(this.frameRequest)
+        this.frame = 0
+        this.update()
+        return promise
+      }
+      update() {
+        let output = ''
+        let complete = 0
+        for (let i = 0, n = this.queue.length; i < n; i++) {
+          let { from, to, start, end, char } = this.queue[i]
+          if (this.frame >= end) {
+            complete++
+            output += to
+          } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+              char = this.randomChar()
+              this.queue[i].char = char
+            }
+            output += `<span class="glitch">${char}</span>`
+          } else {
+            output += from
+          }
+        }
+        this.el.innerHTML = output
+        if (complete === this.queue.length) {
+          this.resolve()
+        } else {
+          this.frameRequest = requestAnimationFrame(this.update)
+          this.frame++
+        }
+      }
+      randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)]
       }
     }
-    this.el.innerHTML = output
-    if (complete === this.queue.length) {
-      this.resolve()
-    } else {
-      this.frameRequest = requestAnimationFrame(this.update)
-      this.frame++
+
+    const phrases = [
+      'We Are ŜPÝ*WørrïørBD🕷.',
+      'Whether in Gaza or Gujarat, oppression is oppression — and we will speak.',
+      'From Kashmir to Palestine — resistance lives in our veins.',
+      'We don\'t forget. We don\'t forgive. We stand with Islam.',
+      'We are hackers, and this is our manifesto.',
+      'You can destroy our homes, but not our faith...',
+      'Do not understimate Power of Muslims',
+      'From Palestine to India, our voices echo the same cry: justice..',
+      'Stop Religious Conflicts',
+      'Otherwise you have to pay hard for this.'
+    ]
+
+    const el = document.querySelector('.text')
+    const fx = new TextScramble(el)
+
+    let counter = 0
+    const next = () => {
+      fx.setText(phrases[counter]).then(() => {
+        setTimeout(next, 1500)
+      })
+      counter = (counter + 1) % phrases.length
     }
-  }
-  randomChar() {
-    return this.chars[Math.floor(Math.random() * this.chars.length)]
-  }
-}
 
-const phrases = [
-  'We Are ŜPÝ*WørrïørBD🕷.',
-  'Whether in Gaza or Gujarat, oppression is oppression — and we will speak.',
-  'From Kashmir to Palestine — resistance lives in our veins.',
-  'We don\'t forget. We don\'t forgive. We stand with Islam.',
-  'We are hackers, and this is our manifesto.',
-  'You can destroy our homes, but not our faith...',
-  'Do not understimate Power of Muslims',
-  'From Palestine to India, our voices echo the same cry: justice..',
-  'Stop Religious Conflicts',
-  'Otherwise you have to pay hard for this.'
-]
+    next()
 
-const el = document.querySelector('.text')
-const fx = new TextScramble(el)
+    'use strict';
 
-let counter = 0
-const next = () => {
-  fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 1500)
-  })
-  counter = (counter + 1) % phrases.length
-}
+    var app = {
+      chars: ['ŜPÝ🕷WørrïørBD', 'ŜPÝ🕷DER', 'Free Palestine', 'ŜPÝ🕷Wolf', 'FucK Israel',
+        'Save Al-Aqsa', 'ŜPÝ🕷ReVeN', 'HACKED!', 'Security', 'Breached!', 'System', '🕷'],
 
-next()
+      init: function () {
+        app.leftContainer = document.createElement('div');
+        app.leftContainer.className = 'animation-container left';
+        document.body.appendChild(app.leftContainer);
 
-'use strict';
+        app.rightContainer = document.createElement('div');
+        app.rightContainer.className = 'animation-container right';
+        document.body.appendChild(app.rightContainer);
 
-var app = {
-  chars: ['ŜPÝ🕷WørrïørBD','ŜPÝ🕷DER','Free Palestine','ŜPÝ🕷Wolf','FucK Israel',
-  'Save Al-Aqsa','ŜPÝ🕷ReVeN','HACKED!','Security','Breached!','System','🕷'],
-  
-  init: function () {
-    app.leftContainer = document.createElement('div');
-    app.leftContainer.className = 'animation-container left';
-    document.body.appendChild(app.leftContainer);
+        window.setInterval(app.add, 100);
+      },
 
-    app.rightContainer = document.createElement('div');
-    app.rightContainer.className = 'animation-container right';
-    document.body.appendChild(app.rightContainer);
+      add: function () {
+        var elementLeft = document.createElement('span');
+        var elementRight = document.createElement('span');
 
-    window.setInterval(app.add, 100);
-  },
+        app.leftContainer.appendChild(elementLeft);
+        app.rightContainer.appendChild(elementRight);
 
-  add: function () {
-    var elementLeft = document.createElement('span');
-    var elementRight = document.createElement('span');
+        app.animate(elementLeft, "left");
+        app.animate(elementRight, "right");
+      },
 
-    app.leftContainer.appendChild(elementLeft);
-    app.rightContainer.appendChild(elementRight);
+      animate: function (element, side) {
+        var character = app.chars[Math.floor(Math.random() * app.chars.length)];
+        var duration = Math.floor(Math.random() * 15) + 1;
+        var offset = Math.floor(Math.random() * (50 - duration * 2)) + 3;
+        var size = 10 + (15 - duration);
 
-    app.animate(elementLeft, "left");
-    app.animate(elementRight, "right");
-  },
+        element.style.cssText = `${side === "left" ? "left" : "right"}:${offset}vw; font-size:${size}px; animation-duration:${duration}s`;
+        element.innerHTML = character;
 
-  animate: function (element, side) {
-    var character = app.chars[Math.floor(Math.random() * app.chars.length)];
-    var duration = Math.floor(Math.random() * 15) + 1;
-    var offset = Math.floor(Math.random() * (50 - duration * 2)) + 3;
-    var size = 10 + (15 - duration);
+        window.setTimeout(app.remove, duration * 1000, element);
+      },
 
-    element.style.cssText = `${side === "left" ? "left" : "right"}:${offset}vw; font-size:${size}px; animation-duration:${duration}s`;
-    element.innerHTML = character;
+      remove: function (element) {
+        element.parentNode.removeChild(element);
+      },
+    };
+    document.addEventListener('DOMContentLoaded', app.init);
+  </script>
 
-    window.setTimeout(app.remove, duration * 1000, element);
-  },
+  <footer>
+    &copy; 2025 ŜPÝ*WørrïørBD. All rights reserved.
+  </footer>
 
-  remove: function (element) {
-    element.parentNode.removeChild(element);
-  },
-};
-document.addEventListener('DOMContentLoaded', app.init);
-    </script> 
-    
-     <footer>
-      &copy; 2025 ŜPÝ*WørrïørBD. All rights reserved. 
-     </footer>
+  <script>
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
 
-     <script>
-        const canvas = document.getElementById("matrix");
-        const ctx = canvas.getContext("2d");
-    
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    
-        const letters = "アァイィウヴエカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        const fontSize = 12;
-        const columns = canvas.width / fontSize;
-        const drops = [];
-     
-        for (let x = 0; x < columns; x++) {
-          drops[x] = 1;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const letters = "アァイィウヴエカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const fontSize = 12;
+    const columns = canvas.width / fontSize;
+    const drops = [];
+
+    for (let x = 0; x < columns; x++) {
+      drops[x] = 1;
+    }
+
+    let hue = 120;
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
         }
-    
-        let hue = 120;
-    
-        function draw() {
-          ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-    
-          ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
-          ctx.font = fontSize + "px monospace";
-    
-          for (let i = 0; i < drops.length; i++) {
-            const text = letters.charAt(Math.floor(Math.random() * letters.length));
-            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    
-            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-              drops[i] = 0;
-            }
-    
-            drops[i]++;
-          }
-    
-          hue += 0.5; // Slowly cycle through colors
-          if (hue >= 360) hue = 0;
-        }
-    
-        setInterval(draw, 33);
-    
-        window.addEventListener("resize", () => {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-        });
-      </script>
+
+        drops[i]++;
+      }
+
+      hue += 0.5; // Slowly cycle through colors
+      if (hue >= 360) hue = 0;
+    }
+
+    setInterval(draw, 33);
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
+
 </html>
