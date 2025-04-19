@@ -330,6 +330,15 @@
         right: 8px;
       }
 
+      .logo-float {
+        filter: drop-shadow(0 0 8px limegreen);
+        transition: transform 0.3s ease;
+      }
+
+      .logo-float:hover {
+        transform: translateY(-50%) scale(1.1);
+      }
+
     }
 
     @media (min-width: 100px) and (max-width: 480px) {
@@ -398,6 +407,7 @@
         width: 100px;
         height: 100px;
       }
+
       .logo-float {
         position: absolute;
         top: 90%;
@@ -414,6 +424,15 @@
 
       .right-logo {
         right: 50px;
+      }
+
+      .logo-float {
+        filter: drop-shadow(0 0 8px limegreen);
+        transition: transform 0.3s ease;
+      }
+
+      .logo-float:hover {
+        transform: translateY(-50%) scale(1.1);
       }
     }
 
