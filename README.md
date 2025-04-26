@@ -16,7 +16,7 @@ This project contains an HTML file for a "deface page," often used in ethical ha
   - Fully responsive layout for desktop and mobile devices.
   - Adjustments made for smaller screens using CSS media queries.
 
-- **Glitch Heading Effect:**
+- **Glitch Heading Effect:** 
   - A dynamic "glitch" animation applied to the heading for a striking visual effect.
 
 - **Random Background Images:**
