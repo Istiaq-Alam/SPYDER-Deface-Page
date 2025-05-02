@@ -11,8 +11,8 @@ This project contains an HTML file for a "deface page," often used in ethical ha
 - **Animated Terminal Interface:**
   - Simulates a terminal environment with animated typing effects and dynamic content.
   - Displays warning messages in a styled terminal UI.
-
-- **Responsive Design:**
+  
+- **Responsive Design:**  
   - Fully responsive layout for desktop and mobile devices.
   - Adjustments made for smaller screens using CSS media queries.
 
