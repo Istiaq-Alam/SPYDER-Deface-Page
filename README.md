@@ -6,17 +6,17 @@ Page View Count   ![Page View](https://hits.sh/https://istiaq-alam.github.io/SPY
 ## Overview
 This project contains an HTML file for a "deface page," often used in ethical hacking demonstrations or cybersecurity training to simulate website security breaches. The page mimics the appearance of a defaced website and serves as a tool for awareness and education about web application security.
 
-## Features
+## Features 
 
 - **Animated Terminal Interface:**
   - Simulates a terminal environment with animated typing effects and dynamic content.
   - Displays warning messages in a styled terminal UI.
-
-- **Responsive Design:**
+  
+- **Responsive Design:**  
   - Fully responsive layout for desktop and mobile devices.
   - Adjustments made for smaller screens using CSS media queries.
 
-- **Glitch Heading Effect:**
+- **Glitch Heading Effect:** 
   - A dynamic "glitch" animation applied to the heading for a striking visual effect.
 
 - **Random Background Images:**
